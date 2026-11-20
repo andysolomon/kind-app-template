@@ -1,0 +1,23 @@
+{
+  "name": "kind-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@12.9.1",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "pnpm --filter ./apps/server dev",
+    "build": "pnpm --filter ./apps/server build",
+    "start": "pnpm --filter ./apps/server start",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "infra:plan": "pnpm --filter ./infra run plan",
+    "infra:up": "pnpm --filter ./infra run up && ./scripts/public-url.sh",
+    "infra:down": "pnpm --filter ./infra run down",
+    "url": "./scripts/public-url.sh",
+    "smoke": "./scripts/smoke.sh",
+    "init:app": "node scripts/init-app.mjs"
+  }
+}

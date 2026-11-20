@@ -1,0 +1,16 @@
+# Alchemy hashes this context to decide when to rebuild. Keep it to the files
+# that actually land in the image.
+**/node_modules
+**/dist
+**/*.tsbuildinfo
+**/*.test.ts
+**/test
+.git
+.alchemy
+**/.alchemy
+infra
+scripts
+*.md
+**/.env
+**/.env.*
+!**/.env.example
